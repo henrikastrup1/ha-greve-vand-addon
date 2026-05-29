@@ -1,7 +1,7 @@
-name: "Greve Vandforbrug"
+name: "MinVandforsyning"
 version: "1.0.0"
-slug: "greve_vandforbrug"
-description: "Hent vandforbrugsdata fra minvandforsyning.dk hver 2. time"
+slug: "minvandforsyning"
+description: "Hent vandforbrugsdata fra minvandforsyning.dk — virker med alle vandværker (Greve, Hvidovre, m.fl.)"
 url: "https://github.com/henrikastrup1/ha-greve-vand-addon"
 arch:
   - amd64
@@ -13,10 +13,14 @@ homeassistant_api: true
 auth_api: true
 hassio_role: "manager"
 options:
+  url: "https://www.minvandforsyning.dk/?SK=grv"
   email: ""
   password: ""
+  sensor_name: "sensor.vandforbrug"
   interval_minutes: 120
 schema:
+  url: url
   email: str
   password: password
+  sensor_name: str
   interval_minutes: int(60, 1440)
