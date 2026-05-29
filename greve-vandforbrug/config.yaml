@@ -1,7 +1,7 @@
 name: "MinVandforsyning"
 version: "1.0.0"
 slug: "minvandforsyning"
-description: "Hent vandforbrugsdata fra minvandforsyning.dk — virker med alle vandværker (Greve, Hvidovre, m.fl.)"
+description: "Hent vandforbrugsdata fra minvandforsyning.dk - virker med Greve, Hvidovre m.fl."
 url: "https://github.com/henrikastrup1/ha-greve-vand-addon"
 arch:
   - amd64
@@ -13,7 +13,7 @@ homeassistant_api: true
 auth_api: true
 hassio_role: "default"
 options:
-  url: "https://www.minvandforsyning.dk/?SK=grv"
+  url: str
   email: ""
   password: ""
   sensor_name: "sensor.vandforbrug"
