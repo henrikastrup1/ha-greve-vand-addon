@@ -11,7 +11,7 @@ boot: "auto"
 init: false
 homeassistant_api: true
 auth_api: true
-hassio_role: "manager"
+hassio_role: "default"
 options:
   url: "https://www.minvandforsyning.dk/?SK=grv"
   email: ""

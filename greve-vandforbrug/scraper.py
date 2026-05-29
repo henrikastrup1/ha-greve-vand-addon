@@ -76,7 +76,12 @@ def scrape(url, email, password):
     data = {}
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-gpu"])
+        chromium_path = "/usr/bin/chromium-browser"
+        browser = p.chromium.launch(
+            executable_path=chromium_path,
+            headless=True,
+            args=["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"],
+        )
         ctx = browser.new_context(viewport={"width": 1280, "height": 960})
         page = ctx.new_page()
 
